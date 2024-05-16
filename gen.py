@@ -5,15 +5,17 @@ from polyglot_writer import *
 from chess.polyglot import *
 from torch import nn, Tensor
 
-engine = SimpleEngine.popen_uci('../stockfish/stockfish-ubuntu-x86-64-avx2')
+ENGINE_PATH = 'path/to/engine'
+FACTOR = .5
+THRESHOLD = .01
+ANALYSE_DEPTH = 20
+
+engine = SimpleEngine.popen_uci(ENGINE_PATH)
 board = Board()
 game = Game()
 positions = []
 
 softmin = nn.Softmin()
-FACTOR = .5
-THRESHOLD = .01
-ANALYSE_DEPTH = 20
 
 def build(prob):
     print(f'build({board.fen()}, {prob:.2f})')
