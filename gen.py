@@ -25,7 +25,7 @@ def build(prob):
     scores, moves = [], []
     for move in board.legal_moves:
         board.push(move)
-        score = engine.analyse(board, Limit(depth=ANALYSE_DEPTH))['score'].relative.score()
+        score = engine.analyse(board, Limit(depth=ANALYSE_DEPTH))['score'].relative.score(mate_score=100000)
         scores.append(score * FACTOR)
         moves.append(move)
         board.pop()
