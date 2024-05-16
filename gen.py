@@ -13,7 +13,6 @@ ANALYSE_DEPTH = 20
 
 engine = SimpleEngine.popen_uci(ENGINE_PATH)
 board = Board()
-game = Game()
 positions = []
 
 softmin = nn.Softmin()
