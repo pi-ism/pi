@@ -6,6 +6,7 @@ from chess.polyglot import *
 from torch import nn, Tensor
 
 ENGINE_PATH = 'path/to/engine'
+OUTPUT_PATH = 'path/to/output'
 FACTOR = .5
 THRESHOLD = .01
 ANALYSE_DEPTH = 20
@@ -44,4 +45,4 @@ def build(prob):
 
 build(1)
 
-Polyglot_Writer.write(positions, 'null.bin')
+Polyglot_Writer.write(positions, OUTPUT_PATH)
