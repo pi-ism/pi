@@ -7,6 +7,7 @@ Run `pip3 install chess torch` to install the dependencies.
 ## Configuring
 Change these parameters in `gen.py`:
 - `ENGINE_PATH`: path to your engine
+- `OUTPUT_PATH`: path to the output file (your desired polyglot opening book)
 - `FACTOR`: move quality
 - `THRESHOLD`: probability threshold, roughly equals to 1/(# of positions)
 - `ANALYSE_DEPTH`: analyse depth
